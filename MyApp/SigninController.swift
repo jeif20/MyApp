@@ -8,29 +8,23 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 class SigninController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    //var userID = Auth.auth().currentUser?.uid
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //SIGNING IN
     @IBAction func signin(_ sender: Any) {
-        Auth.auth().signIn(withEmail: self.emailTF.text!, password: self.passwordTF.text!) {(user, error) in
+       Auth.auth().signIn(withEmail: self.emailTF.text!, password: self.passwordTF.text!) {(user, error) in
             if error != nil {
                 let loginerrorAlert = UIAlertController(title: "Login error", message: "\(String(describing: error?.localizedDescription)) Please try again", preferredStyle: .alert)
                 loginerrorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -53,9 +47,10 @@ class SigninController: UIViewController, UITextFieldDelegate {
                 
             }
         }
-        
+      
     }
-    
+ 
+    /*
     //FORGOT PASSWORD
     @IBAction func forgotpws(_ sender: Any) {
         let forgotpwsAlert = UIAlertController(title: "Forgot Password", message: "Enter your email address here", preferredStyle: .alert)
@@ -81,9 +76,7 @@ class SigninController: UIViewController, UITextFieldDelegate {
         }))
         
     }
-    
-    
-    
+   */
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

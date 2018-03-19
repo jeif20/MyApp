@@ -53,7 +53,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y0P-KI-31v"/>
-                                    <segue destination="wqz-qM-D8h" kind="presentation" identifier="loggedin" id="aws-7S-oJ9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ2-cK-RGD">
@@ -85,6 +84,7 @@
                     <connections>
                         <outlet property="emailTF" destination="dMd-j4-ei7" id="W8o-Al-8eE"/>
                         <outlet property="passwordTF" destination="KXe-uW-0sq" id="GjQ-hK-hsD"/>
+                        <segue destination="wqz-qM-D8h" kind="presentation" identifier="loggedin" id="Qbf-Gv-EPY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -205,6 +205,6 @@
         <image name="smart" width="460" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ydT-qg-CMB"/>
+        <segue reference="Yp4-si-cmm"/>
     </inferredMetricsTieBreakers>
 </document>
