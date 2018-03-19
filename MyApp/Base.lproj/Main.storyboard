@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ2-cK-RGD">
-                                <rect key="frame" x="16" y="552" width="343" height="30"/>
+                                <rect key="frame" x="16" y="600" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="I do not have an account. SIGN UP">
@@ -65,6 +65,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="KJw-RE-XZU" kind="presentation" id="Rv4-gy-gJc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0n-Su-L6K">
+                                <rect key="frame" x="16" y="525" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Forgot your password?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotpws:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXJ-sc-98M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -165,6 +176,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp5-Wp-drL">
+                                <rect key="frame" x="16" y="602" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="SIGN OUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signout:" destination="wqz-qM-D8h" eventType="touchUpInside" id="hcj-EO-Hmj"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Yp4-si-cmm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dVd-Br-v4w"/>
@@ -181,4 +204,7 @@
         <image name="register" width="300" height="95"/>
         <image name="smart" width="460" height="124"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ydT-qg-CMB"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -21,7 +21,13 @@ class MainController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //SIGNING OUT
+    @IBAction func signout(_ sender: Any) {
+        
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 
