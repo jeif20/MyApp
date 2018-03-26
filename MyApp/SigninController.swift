@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+
 
 class SigninController: UIViewController, UITextFieldDelegate {
 
@@ -78,7 +80,7 @@ class SigninController: UIViewController, UITextFieldDelegate {
     }
    */
     
-    
+    /*
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailTF{
             passwordTF.becomeFirstResponder()
@@ -87,9 +89,5 @@ class SigninController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-    
-    
-    
-    
-    
+    */
 }

@@ -19,6 +19,7 @@
 		42A3DB98205F56B700810EDC /* MyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3DB97205F56B700810EDC /* MyAppTests.swift */; };
 		42A3DBA3205F56B700810EDC /* MyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3DBA2205F56B700810EDC /* MyAppUITests.swift */; };
 		42A3DBB1205F56DD00810EDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42A3DBB0205F56DD00810EDC /* GoogleService-Info.plist */; };
+		42ADAD7D20693B1900EAEB59 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADAD7C20693B1900EAEB59 /* ForgotPassController.swift */; };
 		8A87E1BC9BE29D53283A2468 /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D3668BD38292B44267F54 /* Pods_MyApp.framework */; };
 		F7FCF25F1525D60E6F7EC9A9 /* Pods_MyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553A4C3392A85D3D06F895C6 /* Pods_MyAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		42A3DBA2205F56B700810EDC /* MyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppUITests.swift; sourceTree = "<group>"; };
 		42A3DBA4205F56B700810EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42A3DBB0205F56DD00810EDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42ADAD7C20693B1900EAEB59 /* ForgotPassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
 		553A4C3392A85D3D06F895C6 /* Pods_MyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DEEA85E1C1ABEFE9D63BCC7 /* Pods-MyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyAppUITests/Pods-MyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		67CB7453E207E68AB9A4B857 /* Pods-MyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyAppUITests/Pods-MyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				4216C47B205F5A38003FC250 /* SigninController.swift */,
 				4216C47D205F5A49003FC250 /* RegisterController.swift */,
 				4216C47F205F5A57003FC250 /* MainController.swift */,
+				42ADAD7C20693B1900EAEB59 /* ForgotPassController.swift */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				4216C47E205F5A49003FC250 /* RegisterController.swift in Sources */,
 				42A3DB85205F56B700810EDC /* ViewController.swift in Sources */,
 				4216C47C205F5A38003FC250 /* SigninController.swift in Sources */,
+				42ADAD7D20693B1900EAEB59 /* ForgotPassController.swift in Sources */,
 				42A3DB83205F56B700810EDC /* AppDelegate.swift in Sources */,
 				4216C480205F5A57003FC250 /* MainController.swift in Sources */,
 			);
