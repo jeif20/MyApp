@@ -23,15 +23,29 @@ class ForgotPassController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var remailTF: UITextField!    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func submit(_ sender: Any) {
+        if emailTF.text == remailTF.text{
+            Auth.auth().sendPasswordReset(withEmail: self.emailTF.text!, completion: {(error) in
+                if error != nil{
+                    let resetFailedAlert = UIAlertController(title: "RESET FAILED", message: "Error: \(describing:error?.localizedDescription))", preferredStyle: .alert)
+                    resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
+                        self.emailTF.text = ""
+                        self.remailTF.text = ""
+                    }))
+                    self.present(resetFailedAlert, animated: true, completion: nil)
+                }else{
+                    let resetEmailSentAlert = UIAlertController(title: "RESET EMAIL SENT", message: "A password has been sent to your registered email address successfully", preferredStyle: .alert)
+                    resetEmailSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
+                        self.emailTF.text = ""
+                        self.remailTF.text = ""
+                        
+                    }))
+                    self.present(resetEmailSentAlert, animated: true, completion: nil)
+                }
+            })
+        }
     }
-    */
-
 }

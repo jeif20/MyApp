@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuw-5d-C5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="796.55172413793105"/>
+            <point key="canvasLocation" x="118" y="922"/>
         </scene>
         <!--ForgotPassController-->
         <scene sceneID="rkP-4I-4g6">
@@ -207,15 +207,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iOs-vm-Hui">
-                                <rect key="frame" x="16" y="374" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFN-IX-Qig">
-                                <rect key="frame" x="142" y="440" width="90" height="30"/>
+                                <rect key="frame" x="142" y="368" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -227,9 +220,23 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submit:" destination="7gB-f8-jV5" eventType="touchUpInside" id="018-jw-F0t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixu-jt-8tz">
+                                <rect key="frame" x="16" y="504" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="I do not have an account. SIGN UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KJw-RE-XZU" kind="presentation" id="Bss-1i-aoL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvw-pt-pkU">
-                                <rect key="frame" x="16" y="518" width="343" height="30"/>
+                                <rect key="frame" x="16" y="438" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Take me back to LOG IN">
@@ -243,10 +250,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JER-dd-br1"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="1Rh-Nh-MV2" id="boo-sa-Wvx"/>
+                        <outlet property="remailTF" destination="ShB-n5-tk9" id="u8S-Bi-AKV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZV-fu-nKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="795.6521739130435"/>
+            <point key="canvasLocation" x="933.60000000000002" y="921.58920539730138"/>
         </scene>
         <!--MainController-->
         <scene sceneID="8W4-O0-YZy">
@@ -292,6 +303,7 @@
         <image name="smart" width="460" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bTf-RX-dWr"/>
+        <segue reference="Rv4-gy-gJc"/>
+        <segue reference="ydT-qg-CMB"/>
     </inferredMetricsTieBreakers>
 </document>
