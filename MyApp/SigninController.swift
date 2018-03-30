@@ -59,15 +59,10 @@ class SigninController: UIViewController, UITextFieldDelegate {
         }
       
     }
- 
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTF{
-            passwordTF.becomeFirstResponder()
-        }else{
-            textField.resignFirstResponder()
-        }
-        return true
+    //HIDE KEYBOARD
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }
