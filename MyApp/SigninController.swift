@@ -24,13 +24,18 @@ class SigninController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    //HIDE KEYBOARD
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     //SIGNING IN
     @IBAction func signin(_ sender: Any) {
-        
        Auth.auth().signIn(withEmail: self.emailTF.text!, password: self.passwordTF.text!) {(user, error) in
             if error != nil {
                 let loginerrorAlert = UIAlertController(title: "LOGIN ERROR", message: "\(String(describing: error?.localizedDescription)) Please try again", preferredStyle: .alert)
                 loginerrorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
+                    
                     self.emailTF.text = ""
                     self.passwordTF.text = ""
                     
@@ -60,9 +65,6 @@ class SigninController: UIViewController, UITextFieldDelegate {
       
     }
     
-    //HIDE KEYBOARD
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+    
     
 }

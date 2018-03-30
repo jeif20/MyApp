@@ -30,14 +30,16 @@ class ForgotPassController: UIViewController {
         if emailTF.text == remailTF.text{
             Auth.auth().sendPasswordReset(withEmail: self.emailTF.text!, completion: {(error) in
                 if error != nil{
-                    let resetFailedAlert = UIAlertController(title: "RESET FAILED", message: "Error: \(describing:error?.localizedDescription))", preferredStyle: .alert)
+                    let resetFailedAlert = UIAlertController(title: "RESET FAILED", message: "\(String(describing: error?.localizedDescription))Text fields are empty", preferredStyle: .alert)
                     resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
                         self.emailTF.text = ""
                         self.remailTF.text = ""
                     }))
                     self.present(resetFailedAlert, animated: true, completion: nil)
+                    return
+                    
                 }else{
-                    let resetEmailSentAlert = UIAlertController(title: "RESET EMAIL SENT", message: "A password has been sent to your registered email address successfully", preferredStyle: .alert)
+                    let resetEmailSentAlert = UIAlertController(title: "RESET EMAIL SENT", message: "A link to change your password has been sent to your registered email address successfully", preferredStyle: .alert)
                     resetEmailSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
                         self.emailTF.text = ""
                         self.remailTF.text = ""
@@ -46,6 +48,13 @@ class ForgotPassController: UIViewController {
                     self.present(resetEmailSentAlert, animated: true, completion: nil)
                 }
             })
+        }else{
+            let emailNotMatchAlert = UIAlertController(title: "OOPS!", message: "Emails do not match", preferredStyle: .alert)
+            emailNotMatchAlert.addAction(UIAlertAction(title: "OK", style: .default, handler:{(action) in
+                self.emailTF.text = ""
+                self.remailTF.text = ""
+            }))
+            present(emailNotMatchAlert, animated: true, completion: nil)
         }
     }
 }
