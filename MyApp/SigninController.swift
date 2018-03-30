@@ -26,6 +26,7 @@ class SigninController: UIViewController, UITextFieldDelegate {
     
     //SIGNING IN
     @IBAction func signin(_ sender: Any) {
+        
        Auth.auth().signIn(withEmail: self.emailTF.text!, password: self.passwordTF.text!) {(user, error) in
             if error != nil {
                 let loginerrorAlert = UIAlertController(title: "LOGIN ERROR", message: "\(String(describing: error?.localizedDescription)) Please try again", preferredStyle: .alert)
