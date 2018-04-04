@@ -8,29 +8,65 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
+import FirebaseDatabase
 
-class MainController: UIViewController {
-
+class MainController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    @IBOutlet weak var tableView: UITableView!
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    //SIGNING OUT
-    @IBAction func signout(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            dismiss(animated: true, completion: nil)
-        } catch let signOutError as NSError {
-            print ("Error signing out: \(signOutError)")
-        } 
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        loadPosts()
         
     }
+    
+    func loadPosts(){
+        Database.database().reference().child("sensor/humiditytemp").observe(.childAdded) { (snapshot: DataSnapshot) in
+            if let dict = snapshot.value as? [String: Any]{
+                
+                let tempValue = dict["Temp"] as! String
+                let humidityValue = dict["Humidity"] as! String 
+                let post = Post(tempValue: tempValue, humidityValue: humidityValue)
+                self.posts.append(post)
+                print(self.posts)
+                self.tableView.reloadData()
+                
+            }
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.detailTextLabel?.text = posts[indexPath.row].humidity
+        //cell.detailTextLabel?.text = posts[indexPath.row].temp
+        return cell
+    }
+    
+    
+    
+
+    //SIGNING OUT
+    @IBAction func signout(_ sender: Any) {
+        self.performSegue(withIdentifier: "loggedout", sender: self)
+        let logoutAlert = UIAlertController(title: "LOG OUT", message: "You have logged out successuflly", preferredStyle: .alert)
+        logoutAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action) in
+            
+        }))
+        self.present(logoutAlert, animated: true, completion: nil)
+        do{
+            try Auth.auth().signOut()
+        } catch{
+            //handle error
+        }
+    }
+    
 }
