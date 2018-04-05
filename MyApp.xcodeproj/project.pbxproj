@@ -22,6 +22,8 @@
 		42A3DBB1205F56DD00810EDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42A3DBB0205F56DD00810EDC /* GoogleService-Info.plist */; };
 		42ADAD7D20693B1900EAEB59 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADAD7C20693B1900EAEB59 /* ForgotPassController.swift */; };
 		42C3C42520743BC5003BC210 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3C42420743BC5003BC210 /* Post.swift */; };
+		42E118732074619A00E574F0 /* TempController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E118722074619A00E574F0 /* TempController.swift */; };
+		42FEC9AC20757EC40077B612 /* dropMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FEC9AB20757EC40077B612 /* dropMenuController.swift */; };
 		8A87E1BC9BE29D53283A2468 /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D3668BD38292B44267F54 /* Pods_MyApp.framework */; };
 		F7FCF25F1525D60E6F7EC9A9 /* Pods_MyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553A4C3392A85D3D06F895C6 /* Pods_MyAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		42A3DBB0205F56DD00810EDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42ADAD7C20693B1900EAEB59 /* ForgotPassController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
 		42C3C42420743BC5003BC210 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		42E118722074619A00E574F0 /* TempController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempController.swift; sourceTree = "<group>"; };
+		42FEC9AB20757EC40077B612 /* dropMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropMenuController.swift; sourceTree = "<group>"; };
 		553A4C3392A85D3D06F895C6 /* Pods_MyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DEEA85E1C1ABEFE9D63BCC7 /* Pods-MyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyAppUITests/Pods-MyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		67CB7453E207E68AB9A4B857 /* Pods-MyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyAppUITests/Pods-MyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		42A3DB81205F56B700810EDC /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				42C3C42420743BC5003BC210 /* Post.swift */,
 				42A3DB82205F56B700810EDC /* AppDelegate.swift */,
 				42A3DB84205F56B700810EDC /* ViewController.swift */,
 				42A3DB86205F56B700810EDC /* Main.storyboard */,
@@ -147,8 +152,9 @@
 				4216C47B205F5A38003FC250 /* SigninController.swift */,
 				4216C47D205F5A49003FC250 /* RegisterController.swift */,
 				42ADAD7C20693B1900EAEB59 /* ForgotPassController.swift */,
+				42FEC9AB20757EC40077B612 /* dropMenuController.swift */,
 				4216C47F205F5A57003FC250 /* MainController.swift */,
-				42C3C42420743BC5003BC210 /* Post.swift */,
+				42E118722074619A00E574F0 /* TempController.swift */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";
@@ -496,6 +502,8 @@
 			files = (
 				42242405206DD7A300038DE3 /* ButtonsAnimations.swift in Sources */,
 				4216C47E205F5A49003FC250 /* RegisterController.swift in Sources */,
+				42E118732074619A00E574F0 /* TempController.swift in Sources */,
+				42FEC9AC20757EC40077B612 /* dropMenuController.swift in Sources */,
 				42A3DB85205F56B700810EDC /* ViewController.swift in Sources */,
 				42C3C42520743BC5003BC210 /* Post.swift in Sources */,
 				4216C47C205F5A38003FC250 /* SigninController.swift in Sources */,

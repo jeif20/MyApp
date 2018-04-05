@@ -1,17 +1,16 @@
 //
-//  MainController.swift
+//  TempController.swift
 //  MyApp
 //
-//  Created by Juan Andonaire on 3/18/18.
+//  Created by Juan Andonaire on 4/3/18.
 //  Copyright © 2018 Juan Andonaire. All rights reserved.
 //
 
 import UIKit
-import Firebase
 import FirebaseDatabase
 
-class MainController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
+class TempController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     @IBOutlet weak var tableView: UITableView!
     var posts = [Post]()
     
@@ -29,7 +28,7 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let dict = snapshot.value as? [String: Any]{
                 
                 let tempValue = dict["Temp"] as! String
-                let humidityValue = dict["Humidity"] as! String 
+                let humidityValue = dict["Humidity"] as! String
                 let post = Post(tempValue: tempValue, humidityValue: humidityValue)
                 self.posts.append(post)
                 print(self.posts)
@@ -45,8 +44,9 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.detailTextLabel?.text = posts[indexPath.row].humidity
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+        cell.detailTextLabel?.text = posts[indexPath.row].temp
         return cell
     }
+    
 }
